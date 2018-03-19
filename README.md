@@ -39,16 +39,16 @@ The model is based on the [C3D TensorFlow Model](https://github.com/hx173149/C3D
 
 ## 1. Build the Model
 
-Clone the `MAX-C3D` repository locally. In a terminal, run the following command:
+Clone this repository locally. In a terminal, run the following command:
 
 ```
-$ git clone https://github.com/IBM/MAX-C3D
+$ git clone https://github.com/IBM/MAX-Sports-Video-Classifier.git
 ```
 
 Change directory into the repository base folder:
 
 ```
-$ cd MAX-C3D
+$ cd MAX-Sports-Video-Classifier
 ```
 
 To build the docker image locally, run: 
