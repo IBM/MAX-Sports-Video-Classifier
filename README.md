@@ -48,7 +48,7 @@ $ git clone https://github.com/IBM/MAX-Sports-Video-Classifier.git
 Change directory into the repository base folder:
 
 ```
-$ cd MAX-C3D
+$ cd MAX-Sports-Video-Classifier
 ```
 
 To build the docker image locally, run: 
