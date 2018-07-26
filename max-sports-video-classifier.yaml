@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: max-sports-video-classifier
+spec:
+  selector:
+    app: max-sports-video-classifier
+  ports:
+  - port: 5000
+  type: NodePort
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: max-sports-video-classifier
+  labels:
+    app: max-sports-video-classifier
+spec:
+  selector:
+    matchLabels:
+      app: max-sports-video-classifier
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: max-sports-video-classifier
+    spec:
+      containers:
+      - name: max-sports-video-classifier
+        image: codait/max-sports-video-classifier:latest
+        ports:
+        - containerPort: 5000
