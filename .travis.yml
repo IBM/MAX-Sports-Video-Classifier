@@ -10,7 +10,7 @@ install:
 - docker run -it -d -p 5000:5000 max-sports-video-classifier
 
 before_script:
-- pip install pytest pycurl
+- pip install pytest requests
 
 script:
 - pytest tests/test.py

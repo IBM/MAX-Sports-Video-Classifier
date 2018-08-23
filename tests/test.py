@@ -1,22 +1,22 @@
 import pytest
-import pycurl
-import io
-import json
+import requests
 
 
 def test_response():
-    c = pycurl.Curl()
-    b = io.BytesIO()
-    c.setopt(pycurl.URL, 'http://localhost:5000/model/predict')
-    c.setopt(pycurl.HTTPHEADER, ['Accept:application/json', 'Content-Type: multipart/form-data'])
-    c.setopt(pycurl.HTTPPOST, [('video', (pycurl.FORM_FILE, "assets/basketball.mp4"))])
-    c.setopt(pycurl.WRITEFUNCTION, b.write)
-    c.perform()
-    assert c.getinfo(pycurl.RESPONSE_CODE) == 200
-    c.close()
 
-    response = b.getvalue()
-    response = json.loads(response)
+    model_endpoint = 'http://localhost:5000/model/predict'
+    file_name = 'basketball.mp4'  # due to a weird issue with the way model.py saves the uploaded video `file_form` can
+                                  # only contain the file name, not the path. This issue does not exist when using CURL
+    file_path = 'assets/' + file_name
+
+    with open(file_path, 'rb') as file:
+        file_form = {'video': (file_name, file, 'video/mp4')}
+        print(file_form)
+        r = requests.post(url=model_endpoint, files=file_form)
+
+    assert r.status_code == 200
+
+    response = r.json()
 
     assert response['status'] == 'ok'
 
