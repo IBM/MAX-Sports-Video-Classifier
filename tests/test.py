@@ -11,7 +11,6 @@ def test_response():
 
     with open(file_path, 'rb') as file:
         file_form = {'video': (file_name, file, 'video/mp4')}
-        print(file_form)
         r = requests.post(url=model_endpoint, files=file_form)
 
     assert r.status_code == 200

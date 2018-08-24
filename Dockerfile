@@ -4,7 +4,7 @@ ARG model_bucket=http://max-assets.s3-api.us-geo.objectstorage.softlayer.net/tf/
 ARG model_file=max_c3d_sports1m_tf.tar.gz
 
 WORKDIR /workspace
-RUN wget -nv ${model_bucket}/${model_file} --output-document=/workspace/assets/${model_file}
+RUN wget -nv --show-progress --progress=bar:force:noscroll ${model_bucket}/${model_file} --output-document=/workspace/assets/${model_file}
 RUN tar -x -C assets/ -f assets/${model_file} -v && rm assets/${model_file}
 
 ARG tensorflow_version=1.6.0
