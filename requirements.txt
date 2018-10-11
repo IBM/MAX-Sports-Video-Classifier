@@ -1,0 +1,4 @@
+tensorflow==1.6.0
+Pillow
+ffmpy
+opencv-python
