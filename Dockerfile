@@ -7,14 +7,14 @@ WORKDIR /workspace
 RUN wget -nv --show-progress --progress=bar:force:noscroll ${model_bucket}/${model_file} --output-document=/workspace/assets/${model_file}
 RUN tar -x -C assets/ -f assets/${model_file} -v && rm assets/${model_file}
 
-ARG tensorflow_version=1.6.0
 RUN apt-get update && apt-get install -y ffmpeg && rm -rf /var/lib/apt/lists/*
-RUN pip install tensorflow==${tensorflow_version} && \
-    pip install Pillow && \
-    pip install ffmpy && \
-    pip install opencv-python
+
+COPY requirements.txt /workspace
+RUN pip install -r requirements.txt
 
 COPY . /workspace
+
+RUN md5sum -c md5sums.txt  # check file integrity
 
 EXPOSE 5000
 

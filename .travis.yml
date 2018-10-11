@@ -11,6 +11,7 @@ install:
 
 before_script:
 - pip install pytest requests
+- sleep 10
 
 script:
 - pytest tests/test.py
