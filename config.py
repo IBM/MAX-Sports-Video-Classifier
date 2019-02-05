@@ -8,8 +8,8 @@ RESTPLUS_MASK_SWAGGER = False
 SWAGGER_UI_DOC_EXPANSION = 'none'
 
 # API metadata
-API_TITLE = 'Model Asset Exchange Server'
-API_DESC = 'An API for serving models'
+API_TITLE = 'MAX Sports Video Classifier'
+API_DESC = 'Classify sporting activities in videos.'
 API_VERSION = '0.1'
 
 # default model
