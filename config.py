@@ -10,7 +10,7 @@ SWAGGER_UI_DOC_EXPANSION = 'none'
 # API metadata
 API_TITLE = 'MAX Sports Video Classifier'
 API_DESC = 'Classify sporting activities in videos.'
-API_VERSION = '0.1'
+API_VERSION = '1.1.0'
 
 # default model
 MODEL_NAME = 'C3D'
