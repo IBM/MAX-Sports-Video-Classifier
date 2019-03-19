@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/IBM/MAX-Sports-Video-Classifier.svg?branch=master)](https://travis-ci.com/IBM/MAX-Sports-Video-Classifier) [![Website Status](https://img.shields.io/website/http/max-sports-video-classifier.max.us-south.containers.appdomain.cloud/swagger.json.svg?label=api+demo)](http://max-sports-video-classifier.max.us-south.containers.appdomain.cloud/)
+
 # IBM Code Model Asset Exchange: Sports Video Classifier
 
 This repository contains code to instantiate and deploy a video classification model. The model recognizes the 487 different classes of sports activities in the [Sports-1M Dataset](https://cs.stanford.edu/people/karpathy/deepvideo/). The model consists of a deep 3-D convolutional net that was trained on the Sports-1M dataset. The input to the model is a video, and the output is a list of estimated class probabilities.
