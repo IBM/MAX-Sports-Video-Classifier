@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/IBM/MAX-Sports-Video-Classifier.svg?branch=master)](https://travis-ci.com/IBM/MAX-Sports-Video-Classifier) [![Website Status](https://img.shields.io/website/http/max-sports-video-classifier.max.us-south.containers.appdomain.cloud/swagger.json.svg?label=api+demo)](http://max-sports-video-classifier.max.us-south.containers.appdomain.cloud/)
+[![Build Status](https://travis-ci.org/IBM/MAX-Sports-Video-Classifier.svg?branch=master)](https://travis-ci.org/IBM/MAX-Sports-Video-Classifier) [![Website Status](https://img.shields.io/website/http/max-sports-video-classifier.max.us-south.containers.appdomain.cloud/swagger.json.svg?label=api+demo)](http://max-sports-video-classifier.max.us-south.containers.appdomain.cloud/)
 
 # IBM Code Model Asset Exchange: Sports Video Classifier
 
