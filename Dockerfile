@@ -1,4 +1,3 @@
-
 #
 # Copyright 2018-2019 IBM Corp. All Rights Reserved.
 #
