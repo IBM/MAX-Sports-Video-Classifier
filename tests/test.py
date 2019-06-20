@@ -50,7 +50,7 @@ def test_predict():
     model_endpoint = 'http://localhost:5000/model/predict'
     file_name = 'basketball.mp4'  # due to a weird issue with the way model.py saves the uploaded video `file_form` can
                                   # only contain the file name, not the path. This issue does not exist when using CURL
-    file_path = 'assets/' + file_name
+    file_path = 'samples/' + file_name
 
     with open(file_path, 'rb') as file:
         file_form = {'video': (file_name, file, 'video/mp4')}

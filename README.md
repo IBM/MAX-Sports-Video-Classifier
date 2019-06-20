@@ -27,7 +27,7 @@ The model is based on the [C3D TensorFlow Model](https://github.com/hx173149/C3D
 | This repository | [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0) | [LICENSE](LICENSE) |
 | Model Weights | [MIT](https://opensource.org/licenses/MIT) | [C3D-TensorFlow](https://github.com/hx173149/C3D-tensorflow) |
 | Model Code (3rd party) | [MIT](https://opensource.org/licenses/MIT) | [C3D-TensorFlow](https://github.com/hx173149/C3D-tensorflow) |
-| Test assets | Various | [Asset README](assets/README.md) |
+| Test assets | Various | [Asset README](samples/README.md) |
 
 ## Pre-requisites:
 
@@ -114,7 +114,7 @@ Use the `model/predict` endpoint to load a test video file and get predicted lab
 You can also test it on the command line, for example:
 
 ```
-$ curl -F "video=@assets/basketball.mp4" -XPOST http://localhost:5000/model/predict
+$ curl -F "video=@samples/basketball.mp4" -XPOST http://localhost:5000/model/predict
 ```
 
 ```json
