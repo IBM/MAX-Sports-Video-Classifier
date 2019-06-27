@@ -1,10 +1,13 @@
 [![Build Status](https://travis-ci.org/IBM/MAX-Sports-Video-Classifier.svg?branch=master)](https://travis-ci.org/IBM/MAX-Sports-Video-Classifier) [![Website Status](https://img.shields.io/website/http/max-sports-video-classifier.max.us-south.containers.appdomain.cloud/swagger.json.svg?label=api+demo)](http://max-sports-video-classifier.max.us-south.containers.appdomain.cloud/)
 
+[<img src="docs/deploy-max-to-ibm-cloud-with-kubernetes-button.png" width="400px">](http://ibm.biz/max-to-ibm-cloud-tutorial)
+
 # IBM Code Model Asset Exchange: Sports Video Classifier
 
 This repository contains code to instantiate and deploy a video classification model. The model recognizes the 487 different classes of sports activities in the [Sports-1M Dataset](https://cs.stanford.edu/people/karpathy/deepvideo/). The model consists of a deep 3-D convolutional net that was trained on the Sports-1M dataset. The input to the model is a video, and the output is a list of estimated class probabilities.
 
-The model is based on the [C3D TensorFlow Model](https://github.com/hx173149/C3D-tensorflow). The model files are hosted on [IBM Cloud Object Storage](http://max-assets.s3.us.cloud-object-storage.appdomain.cloud/sports-video-classifier/1.0/assets.tar.gz). The code in this repository deploys the model as a web service in a Docker container. This repository was developed as part of the [IBM Code Model Asset Exchange](https://developer.ibm.com/code/exchanges/models/).
+The model is based on the [C3D TensorFlow Model](https://github.com/hx173149/C3D-tensorflow). The model files are hosted on [IBM Cloud Object Storage](http://max-assets.s3.us.cloud-object-storage.appdomain.cloud/sports-video-classifier/1.0/assets.tar.gz). The code in this repository deploys the model as a web service in a Docker container. This repository was developed as part of the [IBM Code Model Asset Exchange](https://developer.ibm.com/code/exchanges/models/) and the public API is powered by [IBM Cloud](https://ibm.biz/Bdz2XM).
+
 
 ## Model Metadata
 | Domain | Application | Industry  | Framework | Training Data | Input Data Format |
@@ -59,6 +62,8 @@ $ kubectl apply -f https://raw.githubusercontent.com/IBM/MAX-Sports-Video-Classi
 ```
 
 The model will be available internally at port `5000`, but can also be accessed externally through the `NodePort`.
+
+A more elaborate tutorial on how to deploy this MAX model to production on [IBM Cloud](https://ibm.biz/Bdz2XM) can be found [here](http://ibm.biz/max-to-ibm-cloud-tutorial).
 
 ## Run Locally
 
