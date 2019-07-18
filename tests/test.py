@@ -48,8 +48,10 @@ def test_metadata():
 def test_predict():
 
     model_endpoint = 'http://localhost:5000/model/predict'
-    file_name = 'basketball.mp4'  # due to a weird issue with the way model.py saves the uploaded video `file_form` can
-                                  # only contain the file name, not the path. This issue does not exist when using CURL
+
+    # due to a weird issue with the way model.py saves the uploaded video `file_form` can only contain the file name,
+    # not the path. This issue does not exist when using CURL
+    file_name = 'basketball.mp4'
     file_path = 'samples/' + file_name
 
     with open(file_path, 'rb') as file:

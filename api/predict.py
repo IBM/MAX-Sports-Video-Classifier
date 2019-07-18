@@ -18,7 +18,7 @@ from core.model import ModelWrapper
 from maxfw.core import MAX_API, PredictAPI
 
 import os
-from flask_restplus import Namespace, Resource, fields
+from flask_restplus import fields
 from werkzeug.datastructures import FileStorage
 
 
