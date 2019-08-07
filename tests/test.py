@@ -42,6 +42,8 @@ def test_metadata():
     assert metadata['id'] == 'max-sports-video-classifier'
     assert metadata['name'] == 'MAX Sports Video Classifier'
     assert metadata['description'] == 'C3D TensorFlow video classification model trained on the Sports1m dataset'
+    assert 'max-sports-video-classifier' in metadata['source']
+    assert metadata['type'] == 'Video Classification'
     assert metadata['license'] == 'MIT'
 
 
