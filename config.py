@@ -48,5 +48,6 @@ MODEL_META_DATA = {
     'name': '{} TensorFlow Model'.format(MODEL_NAME),
     'description': '{} TensorFlow video classification model trained on the Sports1m dataset'.format(MODEL_NAME),
     'type': 'video_classification',
+    'source': 'https://developer.ibm.com/exchanges/models/all/max-sports-video-classifier/'
     'license': '{}'.format(MODEL_LICENSE)
 }
