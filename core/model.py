@@ -104,6 +104,15 @@ def process_frames(dirname, means, batch_size=BATCH_SIZE, num_frames_per_clip=NU
 
 class ModelWrapper(MAXModelWrapper):
 
+    MODEL_META_DATA = {
+        'id': 'max-sports-video-classifier',
+        'name': 'MAX Sports Video Classifier',
+        'description': 'C3D TensorFlow video classification model trained on the Sports1m dataset',
+        'type': 'Video Classification',
+        'source': 'https://developer.ibm.com/exchanges/models/all/max-sports-video-classifier/',
+        'license': 'MIT'
+    }
+
     def __init__(self, path=DEFAULT_MODEL_PATH, model_dir=DEFAULT_MODEL_DIR):
         logger.info('Loading model from: {}...'.format(path))
         sess = tf.Session(graph=tf.Graph())
