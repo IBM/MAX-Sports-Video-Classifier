@@ -39,9 +39,11 @@ def test_metadata():
     assert r.status_code == 200
 
     metadata = r.json()
-    assert metadata['id'] == 'c3d-tf'
-    assert metadata['name'] == 'C3D TensorFlow Model'
+    assert metadata['id'] == 'max-sports-video-classifier'
+    assert metadata['name'] == 'MAX Sports Video Classifier'
     assert metadata['description'] == 'C3D TensorFlow video classification model trained on the Sports1m dataset'
+    assert metadata['source'] == 'https://developer.ibm.com/exchanges/models/all/max-sports-video-classifier/'
+    assert metadata['type'] == 'Video Classification'
     assert metadata['license'] == 'MIT'
 
 
