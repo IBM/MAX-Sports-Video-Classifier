@@ -22,7 +22,7 @@ from flask_restplus import fields
 from werkzeug.datastructures import FileStorage
 
 
-UPLOAD_FOLDER = './assets'
+UPLOAD_FOLDER = '/tmp'
 
 
 label_prediction = MAX_API.model('LabelPrediction', {
