@@ -16,7 +16,7 @@ The model is based on the [C3D TensorFlow Model](https://github.com/hx173149/C3D
 
 ## References
 * _D. Tran, L. Bourdev, R. Fergus, L. Torresani, M. Paluri_, [C3D: Generic Features for Video Analysis](http://vlg.cs.dartmouth.edu/c3d/)
-* _A. Karpathy, G. Toderici, S. Shetty, T. Leung, R. Sukthankar, L. Fei-Fei_, ["Large-scale Video Classification with Convolutional Neural Networks](https://cs.stanford.edu/people/karpathy/deepvideo/deepvideo_cvpr2014.pdf)
+* _A. Karpathy, G. Toderici, S. Shetty, T. Leung, R. Sukthankar, L. Fei-Fei_, ["Large-scale Video Classification with Convolutional Neural Networks"](https://cs.stanford.edu/people/karpathy/deepvideo/deepvideo_cvpr2014.pdf)
 * [Sports-1M Dataset Project Page](https://cs.stanford.edu/people/karpathy/deepvideo/)
 * [C3D TensorFlow Model](https://github.com/hx173149/C3D-tensorflow)
 
