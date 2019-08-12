@@ -18,11 +18,9 @@ from core.model import ModelWrapper
 from maxfw.core import MAX_API, PredictAPI
 
 import os
+import tempfile
 from flask_restplus import fields
 from werkzeug.datastructures import FileStorage
-
-
-UPLOAD_FOLDER = '/tmp'
 
 
 label_prediction = MAX_API.model('LabelPrediction', {
@@ -54,16 +52,17 @@ class ModelPredictAPI(PredictAPI):
         """Make a prediction given input data"""
         result = {'status': 'error'}
 
-        #  Take video save it into directory
-        args = video_parser.parse_args()
-        video_data = args['video']
-        filepath = os.path.join(UPLOAD_FOLDER, video_data.filename)
-        video_data.save(filepath)
+        with tempfile.TemporaryDirectory() as tmp_dir_name:
+            #  Take video save it into directory
+            args = video_parser.parse_args()
+            video_data = args['video']
+            filepath = os.path.join(tmp_dir_name, video_data.filename)
+            video_data.save(filepath)
 
-        #  Run predict function on file
-        preds = self.model_wrapper.predict(filepath)
-        label_preds = [{'label_id': p[0], 'label': p[1], 'probability': p[2]} for p in [x for x in preds]]
-        result['predictions'] = label_preds
-        result['status'] = 'ok'
+            #  Run predict function on file
+            preds = self.model_wrapper.predict(filepath)
+            label_preds = [{'label_id': p[0], 'label': p[1], 'probability': p[2]} for p in [x for x in preds]]
+            result['predictions'] = label_preds
+            result['status'] = 'ok'
 
-        return result
+            return result
