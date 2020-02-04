@@ -1,3 +1,0 @@
-9614d98e10541c77f85757bdcb728254  assets/c3d/saved_model.pb
-e8b7e76b3c822dbf107bd2c49df028bb  assets/c3d/variables/variables.data-00000-of-00001
-39ef4e534ef7376d1fd4287f7a63e117  assets/c3d/variables/variables.index
