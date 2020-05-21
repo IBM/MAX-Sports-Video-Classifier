@@ -25,9 +25,10 @@ install:
   - docker build -t max-sports-video-classifier .
   - docker run -it -d -p 5000:5000 max-sports-video-classifier
   - pip install -r requirements-test.txt
-  -
+
 before_script:
   - flake8 . --max-line-length=127
+  - bandit -r .
   - sleep 30
 
 script:
