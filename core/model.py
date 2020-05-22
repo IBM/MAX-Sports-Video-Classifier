@@ -45,7 +45,7 @@ def get_frames_data(filename, num_frames_per_clip, seed=84):
         filenames = sorted(filenames)
         # fixed random seed for each call
         random.seed(seed)
-        s_index = random.randint(0, len(filenames) - num_frames_per_clip)
+        s_index = random.randint(0, len(filenames) - num_frames_per_clip)  # nosec - randint isn't being used for crypto
         logger.debug('Total frames: {}; start index: {}, end index: {}'.format(len(filenames), s_index,
                                                                                s_index + num_frames_per_clip))
 
