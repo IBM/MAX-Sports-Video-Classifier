@@ -43,6 +43,6 @@ spec:
     spec:
       containers:
       - name: max-sports-video-classifier
-        image: codait/max-sports-video-classifier:latest
+        image: quay.io/codait/max-sports-video-classifier:latest
         ports:
         - containerPort: 5000
