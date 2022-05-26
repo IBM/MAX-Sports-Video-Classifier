@@ -1,4 +1,4 @@
-tensorflow==1.15.4
+tensorflow==2.7.2
 Pillow==8.2.0
 ffmpy==0.2.2
 opencv-python==4.1.0.25
